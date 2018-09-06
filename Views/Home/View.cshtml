@@ -1,0 +1,33 @@
+﻿@model ShoppingCart.Models.Product
+
+
+
+@{
+    ViewData["Title"] = "View Prodct";
+}
+
+<h2> @Html.DisplayFor(model => model.Title)</h2>
+
+<table class="table">
+
+    <tbody>
+
+
+        <tr>
+            
+            <td>
+                <img src=" @Html.DisplayFor(model => model.Imagepath)" height="200" width="150" />
+            </td>
+            <td>
+                Rs.@Html.DisplayFor(model => model.Price)
+            </td>
+            <td>
+                <button class="btn-success">Add to Cart</button>
+            </td>
+
+
+        </tr>
+
+    </tbody>
+</table>
+

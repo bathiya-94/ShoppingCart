@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ShoppingCart.Models.Cateogary>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Cateogaries</h2>
+
+<table class="table">
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <h4>@Html.DisplayFor(modelItem => item.Title)</h4> 
+                </td>
+                <td>
+                    <img src=" @Html.DisplayFor(modelItem => item.Imagepath)" height="200" width="220" />
+                </td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.CateogaryID">View Products</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
